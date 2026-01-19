@@ -1,0 +1,473 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(120deg, #f4f7fb, #eef2f7);
+}
+
+
+
+/* ---------- HEADER ---------- */
+
+
+.top-header {
+  height: 60px;
+  background: linear-gradient(90deg,#3b82f6,#8b5cf6);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 15px;
+  color:white;
+}
+
+.header-left {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.menu-btn {
+  font-size:22px;
+  background:none;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+
+.logo { font-size:20px; font-weight:bold; }
+
+.search {
+  width:250px;
+  padding:7px 10px;
+  border-radius:6px;
+  border:none;
+}
+
+.header-actions button {
+  margin-left:8px;
+  padding:6px 12px;
+  border-radius:15px;
+  border:none;
+  cursor:pointer;
+}
+
+.logout { background:#22c55e; color:white; }
+
+/*----------side and footer--------*/
+
+.sidebar {
+  width:220px;
+  background: linear-gradient(90deg,#000000,#000000);  color:white;
+  padding:20px;
+  transform:translateX(-100%);
+  transition:0.3s;
+}
+
+.sidebar.open { transform:translateX(0); }
+
+.sidebar a {
+  display:block;
+  margin:10px 0;
+  color:#cbd5f5;
+  text-decoration:none;
+}
+
+.sidebar a:hover { color:white; }
+
+.app-wrapper { min-height:100vh; display:flex; flex-direction:column; }
+.content-wrapper { flex:1; display:flex; }
+.main { flex:1; padding:20px; background:#f4f6f9; }
+
+.footer {
+  height:40px;
+  background:#111827;
+  color:white;
+  text-align:center;
+  line-height:40px;
+  font-size:13px;
+}
+
+
+/* ---------- AUTH PAGES ---------- */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-card {
+  background: white;
+  padding: 35px;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.auth-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.auth-input {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 15px;
+  padding: 0 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.auth-button {
+  width: 100%;
+  height: 45px;
+  background: #2b78e4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.auth-button:hover {
+  background: #1e5fd8;
+}
+
+.auth-link {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.msg {
+  margin-top: 10px;
+  color: red;
+  font-size: 13px;
+}
+
+/* ===== Expenses Dashboard UI ===== */
+
+/* Header */
+.expense-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.month-picker {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Summary cards – full row */
+.summary-cards {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.summary-card {
+  flex: 1;
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.summary-card h4 {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.summary-card p {
+  margin-top: 8px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Graphs – same size, full row */
+.graph-section {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.graph-card {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.graph-card h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.chart-box {
+  width: 100%;
+  height: 260px;
+}
+
+/* Table */
+.expense-table {
+  margin-top: 30px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.expense-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expense-table th {
+  background: #f3f4f6;
+  padding: 12px;
+  text-align: left;
+}
+
+.expense-table td {
+  padding: 10px 12px;
+  border-top: 1px solid #eee;
+}
+
+.expense-table tr:hover {
+  background: #f9fafb;
+}
+/* ---------- for dashbord---------- */
+.goal-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.goal-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.goal-bar {
+  background: #e5e7eb;
+  height: 10px;
+  border-radius: 10px;
+  margin: 8px 0;
+  overflow: hidden;
+}
+
+.goal-bar div {
+  height: 100%;
+  background: #3b82f6;
+}
+
+/* ---------- add exp & auto raed ---------- */
+
+.page-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.input-row input,
+.input-row select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-width: 180px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: #2563eb;
+}
+
+/* ---------- goal, budget, and report ---------- */
+
+.goal-card {
+  background: #f9fafb;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.goal-head {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.goal-bar {
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 6px 0;
+}
+
+.goal-bar div {
+  height: 100%;
+  background: #3b82f6;
+}
+
+.page-card h3 {
+  margin-top: 20px;
+}
+
+/*------------profile----------------*/
+/* ===== Profile Page ===== */
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.profile-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.avatar-box {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-btn {
+  background: #e5e7eb;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.field label {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.field input:focus {
+  border-color: #3b82f6;
+}
+
+.primary-btn {
+  margin-top: 10px;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  opacity: 0.9;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+
+.main {
+  padding: 20px;
+  background: #f4f6f9;
+  min-height: calc(100vh - 60px);
+}

@@ -1,0 +1,14 @@
+import mongoose from "mongoose";
+
+const userSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  age: { type: Number, required: true },
+
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+
+  profession: { type: String, default: "" },
+  photo: { type: String, default: "" } // base64 compressed image
+});
+
+export default mongoose.model("User", userSchema);
