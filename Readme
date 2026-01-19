@@ -1,0 +1,58 @@
+# Personal Finance Tracker
+
+A full-stack Personal Finance Tracker web application that helps users manage their daily expenses, monthly budget, and savings goals with visual analytics.
+
+---
+
+##  Features
+
+-  User Authentication (Login / Signup with JWT)
+-  Add, Edit, Delete Expenses
+-  Month-wise Expense Filtering
+-  Visual Charts (Pie, Donut, Bar Graphs)
+-  Monthly Budget Management
+-  Short-term & Long-term Goals
+-  Dashboard with Analytics
+-  PDF Report Download
+-  User Profile with Photo Upload
+-  CSV Auto Import of Expenses
+
+---
+
+## 🛠 Technologies Used
+
+### Frontend:
+- React.js  
+- React Router  
+- Chart.js + react-chartjs-2  
+- Papaparse (CSV Import)  
+- html2canvas & jsPDF (PDF Reports)  
+- CSS (Custom Styling)
+
+### Backend:
+- Node.js  
+- Express.js  
+- MongoDB + Mongoose  
+- JWT Authentication  
+- Multer / Base64 for Image Upload  
+
+---
+
+## 📂 Project Structure
+
+MyServe/
+│
+├── frontend/
+│ ├── src/
+│ │ ├── pages/
+│ │ ├── components/
+│ │ ├── App.js
+│ │ └── index.css
+│
+├── backend/
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ ├── middleware/
+│ ├── config/
+│ └── server.js
